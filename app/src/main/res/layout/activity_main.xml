@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/c"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <View
@@ -13,14 +14,16 @@
         android:layout_height="5dp"
         android:layout_marginStart="30dp"
         android:layout_marginBottom="30dp"
+        android:elevation="1dp"
         android:background="@drawable/scrollbar_track"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/scr"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/thumb"
         android:layout_width="40dp"
         android:layout_height="5dp"
+        android:elevation="1dp"
         android:background="@drawable/scrollbar_thumb"
         app:layout_constraintBottom_toBottomOf="@+id/track"
         app:layout_constraintEnd_toEndOf="@+id/track"
@@ -31,8 +34,13 @@
     <HorizontalScrollView
         android:id="@+id/scr"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="horizontal">
+        android:layout_height="100dp"
+        android:background="#f5f5f5"
+        android:scrollbars="none"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
